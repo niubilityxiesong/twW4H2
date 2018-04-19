@@ -7,10 +7,6 @@ import static org.fest.assertions.api.Assertions.assertThat;
 
 
 public class FizzBuzzGameTest {
-    @Test
-    public void should_return_Fizz_when_have_3() {
-
-    }
 
     @Test
     public void testIntToString() throws Exception {
