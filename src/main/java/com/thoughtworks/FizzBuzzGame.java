@@ -6,7 +6,8 @@ import java.util.List;
 
 public class FizzBuzzGame {
     public List<String> results = new ArrayList<>();
-    public List<String> allnumber = new ArrayList<>();
+    //public List<String> allnumber = new ArrayList<>();
+    public String[] allnumber2;
     public int keywords = -1;
     String array3 = "Fizz";
     String array5 = "Buzz";
@@ -18,8 +19,9 @@ public class FizzBuzzGame {
         String temp = new String();
         for(i = 1; i < count + 1; i++){
 
-            allnumber.clear();
-            IntToString(i);
+            //allnumber.clear();
+            //IntToString(i);
+            allnumber2 = String.valueOf(i).split("");
             keywords = FindKeyWords();
             if(keywords > 0){
                 temp = array3;
@@ -35,28 +37,10 @@ public class FizzBuzzGame {
         getResults();
     }
 
-    public void IntToString(int number){
-        int sum = 1;
-        int tempnumber = number;
-
-        tempnumber /= 10;
-        while(tempnumber > 0){
-            tempnumber /= 10;
-            sum *= 10;
-        }
-
-        while (sum > 0){
-            tempnumber = number / sum;
-            number %= sum;
-            sum /= 10;
-            allnumber.add(String.valueOf(tempnumber));
-        }
-    }
-
     public int FindKeyWords(){
 
-        for(int i = 0; i < allnumber.size(); i++){
-            if(allnumber.get(i).equals("3")){
+        for(int i = 0; i < allnumber2.length; i++){
+            if(allnumber2[i].equals("3")){
                 return 1;
             }
         }
@@ -89,6 +73,24 @@ public class FizzBuzzGame {
 
         return results;
     }
+
+  // public void IntToString(int number){
+  //     int sum = 1;
+  //     int tempnumber = number;
+
+  //     tempnumber /= 10;
+  //     while(tempnumber > 0){
+  //         tempnumber /= 10;
+  //         sum *= 10;
+  //     }
+
+  //     while (sum > 0){
+  //         tempnumber = number / sum;
+  //         number %= sum;
+  //         sum /= 10;
+  //         allnumber.add(String.valueOf(tempnumber));
+  //     }
+  // }
 }
 
 

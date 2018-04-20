@@ -8,24 +8,24 @@ import static org.fest.assertions.api.Assertions.assertThat;
 
 public class FizzBuzzGameTest {
 
-    @Test
-    public void testIntToString() throws Exception {
-        FizzBuzzGame fizzBuzzGame = new FizzBuzzGame();
+  // @Test
+  // public void testIntToString() throws Exception {
+  //     FizzBuzzGame fizzBuzzGame = new FizzBuzzGame();
 
-        fizzBuzzGame.IntToString(13);
-        assertThat(fizzBuzzGame.allnumber.get(0)).isEqualTo("1");
-        assertThat(fizzBuzzGame.allnumber.get(1)).isEqualTo("3");
-    }
+  //     fizzBuzzGame.IntToString(13);
+  //     assertThat(fizzBuzzGame.allnumber.get(0)).isEqualTo("1");
+  //     assertThat(fizzBuzzGame.allnumber.get(1)).isEqualTo("3");
+  // }
 
-    @Test
-    public void testKeywords() throws Exception {
+  // @Test
+  // public void testKeywords() throws Exception {
 
-        FizzBuzzGame fizzBuzzGame = new FizzBuzzGame();
+  //     FizzBuzzGame fizzBuzzGame = new FizzBuzzGame();
 
-        fizzBuzzGame.IntToString(13);
+  //     fizzBuzzGame.IntToString(13);
 
-        assertThat(fizzBuzzGame.FindKeyWords()).isEqualTo(1);
-    }
+  //     assertThat(fizzBuzzGame.FindKeyWords()).isEqualTo(1);
+  // }
 
     @Test
     public void testrule1() throws Exception {
