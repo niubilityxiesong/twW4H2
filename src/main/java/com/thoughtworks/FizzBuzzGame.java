@@ -5,13 +5,12 @@ import java.util.List;
 
 
 public class FizzBuzzGame {
+
     public List<String> results = new ArrayList<>();
-    //public List<String> allnumber = new ArrayList<>();
     public String[] allnumber2;
-    public int keywords = -1;
-    String array3 = "Fizz";
-    String array5 = "Buzz";
-    String array7 = "Whizz";
+    private static String array3 = "Fizz";
+    private static String array5 = "Buzz";
+    private static String array7 = "Whizz";
 
     public void start(int count) {
 
@@ -19,15 +18,10 @@ public class FizzBuzzGame {
         String temp = new String();
         for(i = 1; i < count + 1; i++){
 
-            //allnumber.clear();
-            //IntToString(i);
             allnumber2 = String.valueOf(i).split("");
-            keywords = FindKeyWords();
-            if(keywords > 0){
-                temp = array3;
-                results.add(temp);
-                temp = "";
-                keywords = -1;
+            if(FindKeyWords()){
+
+                results.add(array3);
             }
             else {
                 rule1(i);
@@ -37,14 +31,14 @@ public class FizzBuzzGame {
         getResults();
     }
 
-    public int FindKeyWords(){
+    public boolean FindKeyWords(){
 
         for(int i = 0; i < allnumber2.length; i++){
             if(allnumber2[i].equals("3")){
-                return 1;
+                return true;
             }
         }
-        return -1;
+        return false;
     }
 
     public void rule1(int i){
@@ -73,24 +67,6 @@ public class FizzBuzzGame {
 
         return results;
     }
-
-  // public void IntToString(int number){
-  //     int sum = 1;
-  //     int tempnumber = number;
-
-  //     tempnumber /= 10;
-  //     while(tempnumber > 0){
-  //         tempnumber /= 10;
-  //         sum *= 10;
-  //     }
-
-  //     while (sum > 0){
-  //         tempnumber = number / sum;
-  //         number %= sum;
-  //         sum /= 10;
-  //         allnumber.add(String.valueOf(tempnumber));
-  //     }
-  // }
 }
 
 
